@@ -543,6 +543,23 @@ const AppNavigation = () => {
 export default AppNavigation;
 
 
+-App.js
+import { Provider } from 'react-redux';
+import { store } from './reduxToolKit/store'
+import  AppNavigation from './Navigation/NavigationContainer.jsx'
+import {SafeAreaView} from 'react-native';
+
+const App = () => { 
+  return (
+    <Provider store={store}>
+        <AppNavigation/>
+    </Provider>
+  );
+};
+
+export default App;
+
+
 
 -package.json
 {
